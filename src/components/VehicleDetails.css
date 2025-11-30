@@ -1,0 +1,131 @@
+/* VehicleDetails.css */
+
+.vehicle-details-section {
+    background-color: #fff;
+    padding: 50px 0;
+}
+
+.vehicle-make {
+    font-weight: 800;
+    font-size: 2.5rem;
+    color: #343a40;
+    line-height: 1;
+}
+
+.vehicle-price {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #6c757d;
+}
+
+.price-amount {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #584cda;
+    /* Purple color */
+    margin-right: 5px;
+}
+
+/* Main Car Image Placeholder */
+.main-image-placeholder {
+    width: 100%;
+    height: 250px;
+    /* Adjust height as needed */
+    background-color: #f0f0f0;
+    /* Light gray for silhouette */
+    border-radius: 8px;
+    /* Applying a simple SVG mask to resemble a car silhouette */
+    -webkit-mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 200"><rect width="500" height="200" fill="#fff"/><path d="M480,150 L460,100 L400,100 L380,150 Z M400,100 L350,50 L200,50 L150,100 L20,100 L0,150 Z" fill="#000"/></svg>') no-repeat center / contain;
+    mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 200"><rect width="500" height="200" fill="#fff"/><path d="M480,150 L460,100 L400,100 L380,150 Z M400,100 L350,50 L200,50 L150,100 L20,100 L0,150 Z" fill="#000"/></svg>') no-repeat center / contain;
+}
+
+/* Gallery Thumbnails */
+.thumbnail-box {
+    width: 100px;
+    height: 80px;
+    background-color: #343a40;
+    /* Dark background to simulate the blurred image effect */
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: border-color 0.2s;
+}
+
+.thumbnail-box:hover {
+    border-color: #584cda;
+    /* Highlight on hover */
+}
+
+/* Technical Specification */
+.section-heading {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: #343a40;
+}
+
+.spec-card {
+    background-color: #f8f9fa;
+    /* Light gray background for spec boxes */
+}
+
+.spec-icon {
+    font-size: 1.5rem;
+    color: #584cda;
+    /* Purple color for icons */
+}
+
+.spec-label {
+    font-size: 0.8rem;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.spec-value {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #343a40;
+}
+
+/* Rent Button */
+.rent-button {
+    background-color: #584cda;
+    /* Purple color */
+    border-color: #584cda;
+    font-weight: 600;
+    padding: 12px 0;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    transition: background-color 0.3s;
+}
+
+.rent-button:hover {
+    background-color: #4a3eac;
+    border-color: #4a3eac;
+}
+
+/* Car Equipment List */
+.equipment-item {
+    color: #343a40;
+    font-size: 1rem;
+}
+
+.check-icon {
+    color: #584cda;
+    /* Purple check mark */
+    font-size: 0.9rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 767.98px) {
+    .vehicle-make {
+        font-size: 2rem;
+    }
+
+    .spec-card {
+        /* Stack specifications horizontally on small screens */
+        padding: 15px;
+    }
+
+    .gallery-thumbnails {
+        justify-content: center !important;
+    }
+}

@@ -1,0 +1,247 @@
+/* FooterSection.css */
+
+/* --- Top Banner Section (Purple Part) --- */
+.footer-banner-wrapper {
+    background-color: #584cda;
+    /* Main purple color */
+    padding: 50px 0;
+    border-radius: 20px 20px 20px 20px;
+    /* Rounded top corners */
+    position: relative;
+    overflow: hidden;
+    margin-top: -30px;
+    /* Pulls the banner slightly over the section above it */
+}
+
+.footer-banner-wrapper .container {
+    position: relative;
+    z-index: 2;
+}
+
+.banner-title {
+    font-weight: 800;
+    font-size: 2.5rem;
+    line-height: 1.2;
+}
+
+.banner-subtitle {
+    font-size: 1rem;
+    opacity: 0.8;
+    max-width: 500px;
+}
+
+.search-box-wrapper {
+    max-width: 400px;
+}
+
+.search-input {
+    border-radius: 8px 0 0 8px;
+    border: none;
+    padding: 10px 15px;
+}
+
+.search-button {
+    background-color: #ffc107;
+    /* Yellow color */
+    border: none;
+    color: #fff;
+    font-weight: 600;
+    padding: 10px 20px;
+    border-radius: 0 8px 8px 0;
+    transition: background-color 0.3s;
+}
+
+.search-button:hover {
+    background-color: #e0a800;
+}
+
+/* Car Silhouette Background (on large screens) */
+.car-silhouette {
+    width: 100%;
+    height: 150px;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 200"><rect width="500" height="200" fill="none"/><path d="M480,150 L460,100 L400,100 L380,150 Z M400,100 L350,50 L200,50 L150,100 L20,100 L0,150 Z" fill="%234a3eac" opacity="0.8"/></svg>');
+    /* Simplified dark purple silhouette placeholder */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+}
+
+/* --- Main Footer Content --- */
+.main-footer {
+    background-color: #f8f9fa;
+    /* Light gray background */
+    color: #343a40;
+}
+
+.logo-icon {
+    font-size: 1.5rem;
+    color: #584cda;
+}
+
+.footer-logo-text {
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: #343a40;
+}
+
+.footer-description {
+    font-size: 0.95rem;
+    color: #6c757d;
+}
+
+/* Social Icons */
+.social-icons a {
+    color: #584cda;
+    /* Purple color */
+    font-size: 1.1rem;
+    margin-right: 15px;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #ffc107;
+    /* Yellow hover color */
+}
+
+/* Headings and Links */
+.footer-heading {
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    color: #343a40;
+}
+
+.footer-link {
+    color: #6c757d;
+    font-size: 0.95rem;
+    text-decoration: none;
+    line-height: 2;
+    transition: color 0.2s;
+}
+
+.footer-link:hover {
+    color: #584cda;
+}
+
+/* Contact Info */
+.info-icon {
+    font-size: 1.2rem;
+    color: #ffc107;
+    /* Yellow for the icon */
+}
+
+.info-label {
+    display: block;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+}
+
+.info-value {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #343a40;
+}
+
+/* App Download Links */
+.app-download-links img {
+    max-width: 150px;
+    /* Control image width */
+    border-radius: 8px;
+}
+
+/* Copyright */
+.copyright-text {
+    font-size: 0.85rem;
+    color: #6c757d;
+}
+
+/* Responsive adjustments */
+@media (max-width: 991.98px) {
+    .footer-banner-wrapper {
+        padding: 40px 0;
+        text-align: center;
+    }
+
+    .search-box-wrapper {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    .banner-title,
+    .banner-subtitle {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .main-footer .row {
+        text-align: center;
+    }
+
+    .main-footer .col-lg-2,
+    .main-footer .col-lg-4,
+    .main-footer .col-md-6 {
+        text-align: center;
+    }
+
+    .social-icons {
+        margin-bottom: 30px;
+    }
+
+    .contact-info .col {
+        display: flex;
+        justify-content: center;
+    }
+
+    .contact-info .d-flex {
+        flex-direction: column;
+        align-items: center !important;
+    }
+
+    .contact-info .d-flex .me-2 {
+        margin-right: 0 !important;
+        margin-bottom: 5px;
+    }
+
+    .contact-info .text-content {
+        text-align: center !important;
+    }
+
+    .app-download-links {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .app-store-link,
+    .google-play-link {
+        display: inline-block !important;
+    }
+
+    .footer-links li {
+        display: inline-block;
+        margin: 0 10px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .search-box-wrapper {
+        flex-direction: column;
+        max-width: 250px;
+    }
+
+    .search-input,
+    .search-button {
+        border-radius: 8px;
+        margin-bottom: 10px;
+    }
+
+    .contact-info .col {
+        flex-basis: 50%;
+        /* Arrange contact items side-by-side */
+    }
+}

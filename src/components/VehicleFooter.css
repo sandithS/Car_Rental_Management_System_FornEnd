@@ -1,0 +1,183 @@
+/* VehicleFooter.css */
+
+/* --- 1. Logo Strip Section --- */
+.logo-strip-wrapper {
+    background-color: #fff;
+    /* White background */
+    border-radius: 20px 20px 0 0;
+    box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.05);
+    /* Subtle shadow on top edge */
+}
+
+.logo-row {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.vehicle-logo {
+    max-height: 40px;
+    /* Standardize logo height */
+    opacity: 0.8;
+    transition: opacity 0.3s;
+    /* The inline style in JSX for filter simulates a black logo. 
+     If using actual SVG/PNG logos, you can remove that filter. */
+}
+
+.vehicle-logo:hover {
+    opacity: 1;
+}
+
+/* --- 2. Main Footer Content --- */
+.main-footer {
+    background-color: #fff;
+    /* White background */
+    color: #343a40;
+}
+
+/* Contact/Address Info (Adjusted alignment to match the image better) */
+.info-item {
+    text-align: left;
+}
+
+.info-icon {
+    font-size: 1.2rem;
+    color: #ffc107;
+    /* Yellow for the icon */
+}
+
+.info-label {
+    display: block;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+}
+
+.info-value {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #343a40;
+}
+
+/* Footer general styles (reused from previous footer) */
+.logo-icon {
+    font-size: 1.5rem;
+    color: #584cda;
+}
+
+.footer-logo-text {
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: #343a40;
+}
+
+.footer-description {
+    font-size: 0.95rem;
+    color: #6c757d;
+}
+
+/* Social Icons */
+.social-icons a {
+    color: #584cda;
+    font-size: 1.1rem;
+    margin-right: 15px;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #ffc107;
+}
+
+/* Headings and Links */
+.footer-heading {
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    color: #343a40;
+}
+
+.footer-link {
+    color: #6c757d;
+    font-size: 0.95rem;
+    text-decoration: none;
+    line-height: 2;
+    transition: color 0.2s;
+}
+
+.footer-link:hover {
+    color: #584cda;
+}
+
+/* App Download Links */
+.app-download-links img {
+    max-width: 150px;
+    border-radius: 8px;
+}
+
+/* Copyright */
+.copyright-text {
+    font-size: 0.85rem;
+    color: #6c757d;
+}
+
+/* Responsive adjustments */
+@media (max-width: 991.98px) {
+
+    /* Center footer columns on tablet/mobile */
+    .main-footer .row {
+        text-align: center;
+    }
+
+    .main-footer .col-lg-2,
+    .main-footer .col-lg-4,
+    .main-footer .col-md-6 {
+        text-align: center;
+    }
+
+    /* Center alignment for logo and social icons */
+    .main-footer .d-flex.align-items-center {
+        justify-content: center;
+    }
+
+    .social-icons {
+        margin-bottom: 30px;
+    }
+
+    /* Link lists should stack neatly */
+    .footer-links li {
+        display: block;
+    }
+
+    /* Adjust contact info to stack properly */
+    .contact-info .info-item {
+        text-align: center;
+    }
+
+    .contact-info .d-flex {
+        flex-direction: column;
+        align-items: center !important;
+    }
+
+    .contact-info .d-flex .me-3 {
+        margin-right: 0 !important;
+        margin-bottom: 5px;
+    }
+
+    .app-download-links {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 767.98px) {
+
+    /* Adjust logo strip for better mobile spacing */
+    .logo-strip-wrapper {
+        padding: 30px 0;
+    }
+
+    .logo-col {
+        flex-basis: 33.33%;
+        /* 3 logos per row on mobile */
+        max-width: 33.33%;
+    }
+}

@@ -1,0 +1,72 @@
+/* FeaturesSection.css */
+
+.features-section {
+    background-color: #fff;
+    /* White background as in the image */
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.feature-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.feature-icon {
+    font-size: 3.5rem;
+    /* Larger icon size */
+    color: #343a40;
+    /* Dark gray color for icons */
+    margin-bottom: 1rem;
+    /* Space below the icon */
+}
+
+.feature-item h4 {
+    font-size: 1.5rem;
+    color: #343a40;
+    /* Dark gray for headings */
+}
+
+.feature-item p {
+    font-size: 1rem;
+    color: #6c757d;
+    /* Muted text color */
+    line-height: 1.5;
+    max-width: 280px;
+    /* Limit text width for better readability */
+}
+
+/* Responsive adjustments */
+@media (max-width: 767.98px) {
+    .features-section {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    .feature-item {
+        margin-bottom: 30px;
+        /* Add space between items on small screens */
+    }
+
+    .feature-icon {
+        font-size: 3rem;
+    }
+
+    .feature-item h4 {
+        font-size: 1.3rem;
+    }
+
+    .feature-item p {
+        font-size: 0.95rem;
+    }
+}
+
+/* For very small screens */
+@media (max-width: 575.98px) {
+    .feature-item p {
+        max-width: 90%;
+        /* Allow text to take more width */
+    }
+}

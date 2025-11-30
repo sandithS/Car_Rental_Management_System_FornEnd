@@ -1,0 +1,192 @@
+/* VehicleGroupSection.css */
+
+.vehicle-group-section {
+    background-color: #fff;
+    /* White background */
+}
+
+.section-title {
+    font-weight: 800;
+    /* Extra bold */
+    font-size: 2.5rem;
+    color: #343a40;
+}
+
+/* Filter Buttons */
+.filter-buttons-wrapper {
+    gap: 10px;
+    /* Space between buttons */
+}
+
+.filter-button {
+    background-color: #f0f0f0;
+    /* Light gray for inactive buttons */
+    color: #555;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-weight: 600;
+    display: flex;
+    /* Align icon and text */
+    align-items: center;
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+}
+
+.filter-button:hover {
+    background-color: #e2e2e2;
+    color: #343a40;
+}
+
+.filter-button.active {
+    background-color: #584cda;
+    /* Purple for active button */
+    color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.filter-button.active:hover {
+    background-color: #4a3eac;
+    /* Darker purple on hover */
+    color: #fff;
+}
+
+.filter-button svg {
+    font-size: 1.1rem;
+}
+
+/* --- Vehicle Card Styling (Similar to previous VehicleSection) --- */
+.vehicle-card {
+    border-radius: 12px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.vehicle-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.car-image-container {
+    height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.car-placeholder {
+    width: 100%;
+    height: 100%;
+    background-color: #f0f0f0;
+    /* Light gray color for the silhouette */
+    /* This is where you'd typically apply a background image with background-size: contain; */
+    /* For now, it's just a solid gray box to match the visual area */
+    -webkit-mask-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 100 50" xmlns="http://www.w3.org/2000/svg"><rect width="100%" height="100%" fill="#fff"/></svg>');
+    mask-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 100 50" xmlns="http://www.w3.org/2000/svg"><rect width="100%" height="100%" fill="#fff"/></svg>');
+}
+
+.vehicle-name {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #343a40;
+}
+
+.vehicle-type {
+    font-size: 1rem;
+}
+
+.price-tag {
+    line-height: 1.2;
+}
+
+.price-amount {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #343a40;
+    display: block;
+}
+
+.price-unit {
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.vehicle-features {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #eee;
+    padding-top: 10px;
+}
+
+.feature-item {
+    color: #555;
+    font-size: 0.9rem;
+}
+
+.feature-icon {
+    color: #584cda;
+    /* Purple color for feature icons */
+    font-size: 1.1rem;
+}
+
+.feature-label {
+    white-space: nowrap;
+    /* Prevents text from wrapping */
+}
+
+.view-details-btn {
+    background-color: #584cda;
+    /* Main purple color */
+    border-color: #584cda;
+    font-weight: 600;
+    padding: 10px 0;
+    border-radius: 8px;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.view-details-btn:hover {
+    background-color: #4a3eac;
+    /* Darker purple on hover */
+    border-color: #4a3eac;
+}
+
+/* Responsive adjustments */
+@media (max-width: 991.98px) {
+    .section-title {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .vehicle-features {
+        flex-wrap: wrap;
+        /* Wrap features on very small screens */
+        justify-content: flex-start;
+    }
+
+    .feature-item {
+        margin-right: 15px !important;
+        margin-bottom: 10px;
+        font-size: 0.85rem;
+    }
+
+    .filter-buttons-wrapper {
+        justify-content: flex-start;
+        /* Align buttons to start on smaller screens */
+        padding: 0 15px;
+        /* Add horizontal padding */
+    }
+
+    .filter-button {
+        width: calc(50% - 10px);
+        /* Two buttons per row with gap */
+        margin: 5px;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .filter-button {
+        width: 100%;
+        /* One button per row on extra small screens */
+        margin: 5px 0;
+    }
+}
