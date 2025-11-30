@@ -9,7 +9,7 @@ const heroStyle = {
     padding: '50px 0',
     color: 'white',
     // Background image with tire tracks and car (simplified for code example)
-    backgroundImage: 'url("path/to/tire_tracks_overlay.png")', // Replace with actual image path or CSS styling
+    backgroundImage: 'url("src/assets/bm.png")', // Replace with actual image path or CSS styling
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'left top',
     backgroundSize: 'contain',

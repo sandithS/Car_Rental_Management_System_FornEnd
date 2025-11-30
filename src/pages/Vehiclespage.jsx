@@ -11,7 +11,6 @@ function Homepage() {
             <CustomNavbar />
             <VehicleGroup />
             <VehicleFooter />
-            <VehicleDetails />
         </>
     )
 }

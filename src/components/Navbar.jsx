@@ -39,7 +39,7 @@ const CustomNavbar = () => {
                     {/* Phone/Call-to-Action Section */}
                     <div className="d-flex align-items-center ms-lg-auto">
                         <a
-                            href="tel:+9962471680"
+                            href="tel:+##########"
                             className="d-flex align-items-center text-decoration-none"
                         >
                             <div
@@ -51,7 +51,7 @@ const CustomNavbar = () => {
                             <div className="text-end">
                                 <small className="text-secondary d-block">Need help?</small>
                                 <span className="fw-bold text-dark d-block">
-                                    +996 247-1680
+                                    +### ###-####
                                 </span>
                             </div>
                         </a>
