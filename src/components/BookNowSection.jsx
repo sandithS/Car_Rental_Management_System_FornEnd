@@ -1,6 +1,7 @@
 import React from 'react';
 import { Container, Row, Col, Form, Button } from 'react-bootstrap';
 import { FaCalendarAlt } from 'react-icons/fa'; // Used for the calendar icon
+//import './BookNowSection.css';
 
 // You can define a custom style object for the purple background
 const heroStyle = {
@@ -9,7 +10,7 @@ const heroStyle = {
     padding: '50px 0',
     color: 'white',
     // Background image with tire tracks and car (simplified for code example)
-    backgroundImage: 'url("src/assets/bm.png")', // Replace with actual image path or CSS styling
+    backgroundImage: 'url("src/assets/homePageCar2.png")', // Replace with actual image path or CSS styling
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'left top',
     backgroundSize: 'contain',
@@ -20,7 +21,7 @@ const heroStyle = {
 const BookNowSection = () => {
     return (
         <div className="my-5">
-            <Container style={heroStyle}>
+            <Container style={heroStyle} >
                 <Row className="align-items-center">
                     {/* Left Content Column (Text and Button) */}
                     <Col lg={6} className="mb-5 mb-lg-0 p-5">

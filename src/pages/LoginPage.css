@@ -1,0 +1,169 @@
+/* LoginPage.css */
+
+/* --- Modal/Overlay Wrapper --- */
+.login-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(240, 240, 240, 0.9);
+    /* Light gray transparent background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1050;
+    /* Above typical content */
+}
+
+.login-container {
+    width: 90%;
+    max-width: 900px;
+    /* Max size for the modal box */
+    height: 90%;
+    max-height: 600px;
+    background-color: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Left Column: Image and Background --- */
+.login-image-col {
+    /* Set a fixed height for the image column on medium/large screens */
+    height: 100%;
+}
+
+/* LoginPage.css - Locate and update the following section */
+
+.login-image-wrapper {
+  height: 100%;
+  position: relative;
+  /* --- KEY CHANGE: Defining the gradient background --- */
+  /* This creates the dark-to-light green background */
+  background: linear-gradient(
+    to bottom right, 
+    #1E8449, /* Darker green/teal start color */
+    #2ECC71  /* Lighter green/teal end color */
+  );
+  
+  /* Now, we use a SECOND background property to add the car image on top of the gradient */
+  background-image: url('src/assets/loginCar.png'); /* Replace with the path to your car image */
+  background-size: 100%; /* Make the car image cover the width */
+  background-position: center 80%; /* Center the car and push it down slightly */
+  background-repeat: no-repeat;
+  
+  /* Use multiple backgrounds for flexibility */
+  background: 
+    /* 1. Car Image */
+    url('src/assets/loginCar.png') no-repeat center 60% / 100%, 
+    /* 2. Gradient Background */
+    linear-gradient(to bottom right, #9ad09c, #14b89c);
+}
+
+/* --- Right Column: Form --- */
+.login-form-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* Center content vertically */
+}
+
+.login-title {
+    font-weight: 700;
+    font-size: 2rem;
+    color: #343a40;
+}
+
+.login-subtitle {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    max-width: 350px;
+}
+
+.login-input {
+    border-radius: 8px;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+    /* Light background for input */
+}
+
+.login-btn {
+    background-color: #ffc107;
+    /* Yellow color */
+    border: none;
+    color: #fff;
+    font-weight: 600;
+    padding: 12px 0;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+.login-btn:hover {
+    background-color: #e0a800;
+}
+
+/* Links */
+.login-link {
+    font-size: 0.9rem;
+    color: #555;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.login-link:hover {
+    color: #000;
+}
+
+.phone-login {
+    color: #4CAF50;
+    /* Green link color */
+    font-weight: 600;
+}
+
+.signup-link {
+    color: #4CAF50;
+    /* Green link color */
+    font-weight: 600;
+}
+
+.signup-text {
+    font-size: 0.95rem;
+}
+
+/* Close Button */
+.close-btn {
+    font-size: 1.2rem;
+    position: absolute;
+    /* Position relative to the container for the close button */
+    top: 15px;
+    right: 20px;
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 767.98px) {
+    .login-modal-overlay {
+        padding: 20px;
+    }
+
+    .login-container {
+        height: auto;
+        max-height: 95vh;
+    }
+
+    .login-form-col {
+        padding: 30px 20px !important;
+    }
+
+    .close-btn {
+        position: static;
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .carImg {
+        position: absolute;
+        padding-top: 500px;
+    }
+}

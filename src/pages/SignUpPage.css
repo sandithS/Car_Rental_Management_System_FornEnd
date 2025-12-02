@@ -1,0 +1,228 @@
+/* SignUpPage.css */
+
+/* --- Modal/Overlay Wrapper --- */
+.signup-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(240, 240, 240, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1050;
+}
+
+.signup-container {
+    width: 90%;
+    max-width: 950px;
+    /* Increased max-width for better two-column display */
+    height: 90%;
+    max-height: 600px;
+    background-color: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Left Column: Image and Background (Orange Theme) --- */
+.signup-image-col {
+    height: 100%;
+    position: relative;
+}
+
+.signup-image-wrapper {
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+
+    /* --- Background Circles and Jeep Image --- */
+    background-color: #fcecd7;
+    /* Light creamy orange base color */
+
+    background-image:
+        /* 1. Jeep Image */
+        url('src/assets/signUpCar.png'),
+        /* 2. Orange Circles (using a large radial gradient for the scattered look) */
+        radial-gradient(circle at 10% 20%, rgba(255, 165, 0, 0.3) 10px, transparent 11px),
+        radial-gradient(circle at 80% 90%, rgba(255, 165, 0, 0.3) 15px, transparent 16px),
+        radial-gradient(circle at 50% 50%, rgba(255, 165, 0, 0.3) 12px, transparent 13px),
+        radial-gradient(circle at 30% 80%, rgba(255, 165, 0, 0.3) 8px, transparent 9px),
+        radial-gradient(circle at 95% 10%, rgba(255, 165, 0, 0.3) 14px, transparent 15px);
+
+    /* Positioning and Sizing the background elements */
+    background-size:
+        85%,
+        /* Jeep image size */
+        100% 100%,
+        100% 100%,
+        100% 100%,
+        100% 100%;
+
+    background-position:
+        40% 50%,
+        /* Position Jeep slightly to the right/down (adjust 70% to move up/down) */
+        0 0, 0 0, 0 0, 0 0;
+    /* Ensures gradients cover the area */
+
+    background-repeat: no-repeat, repeat;
+    /* Jeep no-repeat, circles repeat to fill the space */
+}
+
+/* --- Right Column: Form --- */
+.signup-form-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    /* Needed for absolute positioning of the close button */
+}
+
+.signup-welcome {
+    font-weight: 700;
+    font-size: 1.6rem;
+    color: #343a40;
+    line-height: 1;
+}
+
+.signup-title {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #343a40;
+}
+
+/* --- Input Group Styling (Crucial for the icon-in-input look) --- */
+.input-group-icon {
+    position: relative;
+    /* Adds the bottom line effect */
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+    /* Space for the underline */
+    padding-left: 20px;
+}
+
+.input-group-icon:focus-within {
+    border-bottom-color: #ffc107;
+    /* Orange/Yellow focus color for the underline */
+}
+
+.form-icon {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    font-size: 1rem;
+    color: #999;
+    z-index: 2;
+}
+
+.signup-input {
+    border: none !important;
+    border-radius: 0;
+    padding: 0 0 0 25px;
+    /* Pushes text away from the icon */
+    background: transparent;
+    box-shadow: none !important;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #343a40;
+    height: 35px;
+    /* Standardize height */
+}
+
+.signup-input::placeholder {
+    color: #999;
+    font-weight: 400;
+}
+
+/* Terms and Privacy Checkbox */
+.custom-checkbox .form-check-input {
+    border-radius: 4px;
+    /* Slightly squarer checkbox */
+    border-color: #ddd;
+    box-shadow: none !important;
+}
+
+.custom-checkbox .form-check-input:checked {
+    background-color: #ffc107;
+    /* Orange checkmark */
+    border-color: #ffc107;
+}
+
+.terms-link {
+    color: #ffc107;
+    /* Orange link */
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+}
+
+.terms-label {
+    font-size: 0.85rem;
+    color: #666;
+}
+
+/* Sign Up Button */
+.signup-btn {
+    background-color: #ffc107;
+    /* Orange/Yellow color */
+    border: none;
+    color: #fff;
+    font-weight: 600;
+    padding: 12px 0;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.signup-btn:hover {
+    background-color: #e0a800;
+}
+
+/* Login Link */
+.login-text {
+    font-size: 0.95rem;
+    color: #666;
+}
+
+.login-link {
+    color: #ffc107;
+    /* Orange link */
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* Close Button (top right of the container) */
+.close-button-wrapper {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    z-index: 10;
+}
+
+.close-btn {
+    font-size: 1.2rem;
+}
+
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 767.98px) {
+    .signup-modal-overlay {
+        padding: 20px;
+    }
+
+    .signup-container {
+        height: auto;
+        max-height: 95vh;
+    }
+
+    .signup-form-col {
+        padding: 30px 20px !important;
+    }
+
+    .close-button-wrapper {
+        position: static;
+        text-align: right;
+    }
+}

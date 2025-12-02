@@ -42,10 +42,12 @@ const SpecBox = ({ icon: Icon, label, value }) => (
 const VehicleDetails = () => {
     return (
         <section className="vehicle-details-section py-5">
+            
             <Container>
                 <Row>
                     {/* Left Column: Image and Gallery */}
                     <Col lg={6} className="mb-4 mb-lg-0">
+                    
                         <h1 className="vehicle-make">{mockVehicle.make}</h1>
                         <p className="vehicle-price mb-4">
                             <span className="price-amount">${mockVehicle.pricePerDay}</span> / day

@@ -28,6 +28,9 @@ const CustomNavbar = () => {
                         <Nav.Link href="VehicleDetails" className="mx-2 text-dark">
                             Details
                         </Nav.Link>
+                        <Nav.Link href="login" className="mx-2 text-dark">
+                            Login
+                        </Nav.Link>
                         <Nav.Link href="#about" className="mx-2 text-dark">
                             About Us
                         </Nav.Link>
